@@ -1,9 +1,14 @@
 ; This is a Drush Make file. See below for usage.
 ; @author - R.Aubin
+;
+; --------------------
+; Module compatibility
+core = 7.x
 ; Define Drush version
 api = 2
-; Drupal core version
-core = 7.26
+; Drupal version
+projects[drupal][version] = 7.26
+; --------------------
 
 ; Projects - must haves
 projects[views][version] = 3.7
