@@ -64,6 +64,9 @@ projects[imce][subdir] = contrib
 ;projects[imce_wysiwyg][version] =
 projects[imce_wysiwyg][subdir] = contrib
 
+;projects[wysiwyg][version] =
+projects[wysiwyg][subdir] = contrib
+
 ;projects[honeypot][version] =
 projects[honeypot][subdir] = contrib
 
