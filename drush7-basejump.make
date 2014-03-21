@@ -1,16 +1,28 @@
 ; This is a Drush Make file. See below for usage.
 ; @author - R.Aubin
-;
-; --------------------
-; Module compatibility
-core = 7.x
+
+; This is a comment. Anything starting with a semicolon is a comment and will be ignored by the parser. Blanks lines are also ignored.
+; The file uses standard info file format.
+; attribute = value
+
+; The value can optionally be quoted, which sometimes happens in this example for better formatting.
+; attribute = "quoted value"
+
+; REQUIRED ATTRIBUTES
+; The Drush Make API version. This should always be 2.
+
+; ------------------------------------------------------------
 ; Define Drush version
 api = 2
-; Drupal version
-projects[drupal][version] = 7.26
-; --------------------
 
-; Projects - must haves
+; Define Module compatibility
+core = 7.x
+
+; Define Drupal version
+projects[drupal][version] = 7.26
+; ------------------------------------------------------------
+
+; Projects - Must haves
 projects[views][version] = 3.7
 projects[views][subdir] = contrib
 
@@ -80,20 +92,16 @@ projects[feeds][subdir] = contrib
 ; projects[redirect][version] =
 projects[redirect][subdir] = contrib
 
-; Themer
+; ------------------------------------------------------------
+; Theme Layer
+; ------------------------------------------------------------
+
+; Themes
+projects[zen][version] = 5.4
 
 ; Display Suite
 ; projects[ds][version] =
 projects[ds][subdir] = contrib
-
-; projects[block_class][version] =
-projects[block_class][subdir] = contrib
-
-; TinyMCE
-libraries[tinymce][download][type] = get
-libraries[tinymce][download][url] = http://github.com/downloads/tinymce/tinymce/tinymce_3.5.7.zip
-libraries[tinymce][directory_name] = tinymce
-libraries[tinymce][destination] = libraries
 
 ; SEO, etc
 ;projects[google_analytics][version] =
@@ -108,5 +116,16 @@ projects[globalredirect][subdir] = contrib
 ;projects[xmlsitemap][version] =
 projects[xmlsitemap][subdir] = contrib
 
-; Themes
-projects[zen][version] = 5.4
+; Extras
+; projects[block_class][version] =
+projects[block_class][subdir] = contrib
+
+; ------------------------------------------------------------
+; Libraries
+; ------------------------------------------------------------
+
+; TinyMCE
+libraries[tinymce][download][type] = get
+libraries[tinymce][download][url] = http://github.com/downloads/tinymce/tinymce/tinymce_3.5.7.zip
+libraries[tinymce][directory_name] = tinymce
+libraries[tinymce][destination] = libraries
